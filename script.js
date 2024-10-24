@@ -8,5 +8,10 @@ submitBtn.addEventListener('click', () => {
   cardInitial.classList.add('hidden')
   thankYouCard.classList.remove('hidden')
   thankYouCard.classList.add('card--thank-you')
-  ratingSelected.innerText = `You selected ${ratingBtns[0].value} out of 5`
+})
+
+ratingBtns.forEach((button) => {
+  button.addEventListener('click', () => {
+    ratingSelected.innerText = `You selected ${button.value} out of 5`
+  })
 })
